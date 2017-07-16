@@ -1,0 +1,49 @@
+.h1 {
+    color: #559342;
+    padding: 9px 394px;
+}
+
+.input {
+	border: 1px solid #9c9292;
+	height:25px;
+	border-radius: 5px;
+}.textarea {
+	border: 1px solid #9c9292;
+	border-radius: 5px;
+}
+.body{
+color: #565b69;
+background: #EBEDBF;
+}
+.table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 48px;
+    border-color: gray;
+}
+
+.loginform{  
+    padding:10px;  
+    border:1px solid pink;  
+    border-radius:10px;  
+    float:right;  
+    margin-top:10px;  
+}  
+.formheading{  
+    background-color:red;  
+    color:white;  
+    padding:4px;  
+    text-align:center;  
+}  
+.sub{  
+background-color:blue;  
+padding: 7px 40px 7px 40px;  
+color:white;  
+font-weight:bold;  
+margin-left:70px;  
+border-radius:5px;  
+} 
+#xyz{
+	
+	
+}
