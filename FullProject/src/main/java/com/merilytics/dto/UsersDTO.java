@@ -2,7 +2,7 @@ package com.merilytics.dto;
 
 import java.io.Serializable;
 
-public class LoginDTO implements Serializable {
+public class UsersDTO implements Serializable {
 	private String uName;
 	private String pwd;
 

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.merilytics.dto.LoginDTO;
+import com.merilytics.dto.UsersDTO;
 
 /**
  * @author sameer
@@ -18,7 +18,7 @@ import com.merilytics.dto.LoginDTO;
 @Controller
 public class LoginController {
 	@RequestMapping(value="/login",method=RequestMethod.POST)
-	public @ResponseBody String loginPage(@RequestBody LoginDTO map){
+	public @ResponseBody String loginPage(@RequestBody UsersDTO map){
 		System.out.println("inside login controller");
 		System.out.println(map.getuName()+"        "+map.getPwd());
 		//System.out.println(userName.length());
