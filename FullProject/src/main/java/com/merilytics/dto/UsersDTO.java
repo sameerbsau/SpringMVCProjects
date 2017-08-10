@@ -4,31 +4,36 @@ import java.io.Serializable;
 
 public class UsersDTO implements Serializable {
 	private int userID;
-	private String uName;
-	private String pwd;
-
-	public String getuName() {
-		return uName;
-	}
-
+	private String email;
+	private String password;
+	private boolean enabled;
 	public int getUserID() {
 		return userID;
 	}
-
 	public void setUserID(int userID) {
 		this.userID = userID;
 	}
-
-	public void setuName(String uName) {
-		this.uName = uName;
+	public String getEmail() {
+		return email;
 	}
-
-	public String getPwd() {
-		return pwd;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public String getPassword() {
+		return password;
 	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public boolean isEnabled() {
+		return enabled;
+	}
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+	
+	
+	
+	
 
-}
+	}

@@ -3,7 +3,6 @@ package com.merilytics.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.Resource;
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Controller;
@@ -29,12 +28,13 @@ public class LoginController {
 		System.out.println(map.getuName() + "        " + map.getPwd());
 		// System.out.println(userName.length());
 		// System.out.println(userName+""+passWord);
-*/	
+*/	System.out.println(map);
 		 UsersDTO dt=	service.loginService(map);
-		 if(dt!=null)
-		return "logged in successfully";
-		 else
-			 return "login failure";
+		 if(dt!=null) {
+			return "logged in successfully";
+		} else {
+			return "login failure";
+		}
 	}
 
 	@RequestMapping(value = "/test", method = RequestMethod.GET)

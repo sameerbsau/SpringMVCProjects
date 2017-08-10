@@ -17,10 +17,10 @@
         <p ng-bind="myWelcome[0]"></p>
         <form name="myForm">
             <h3>Sign in</h3>
-            <input type="email" placeholder="enter username" ng-model="vm.uName" name="username" required/>
+            <input type="email" placeholder="enter username" ng-model="vm.email" name="username" required/>
             <span ng-show="myForm.username.$error.email">Not a valid e-mail address</span>
 
-            <input type="password" placeholder="Enter Password" ng-model="vm.pwd" name="password" required/>
+            <input type="password" placeholder="Enter Password" ng-model="vm.password" name="password" required/>
 
             <input type="button" id="login-btn" value="login" ng-click="loginCheck(vm)" />
             <a href="#!london">forgot password</a>

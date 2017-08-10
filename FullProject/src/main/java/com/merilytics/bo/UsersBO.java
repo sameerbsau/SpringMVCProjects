@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="users")
-@NamedQueries({ @NamedQuery(name = "query", query = "select count(1) from UsersBO where email=? and password =?") })
+@NamedQueries({ @NamedQuery(name = "query", query = "select count(1) from UsersBO where email=:val1 and password =:val2") })
 public class UsersBO {
 	public int getUserID() {
 		return userID;
@@ -22,6 +22,22 @@ public class UsersBO {
 	private int userID;
 	private String email;
 	private String password;
+	private boolean enabled;
+	
+
+	@Override
+	public String toString() {
+		return "UsersBO [userID=" + userID + ", email=" + email + ", password=" + password + ", enabled=" + enabled
+				+ "]";
+	}
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
 
 	public String getEmail() {
 		return email;

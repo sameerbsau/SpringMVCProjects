@@ -17,10 +17,14 @@ public class UsersServiceImpl implements UsersService {
 	public UsersDTO loginService(UsersDTO dto) {
 		UsersBO bo=null;
 		bo= new UsersBO();
+		System.out.println("in service DTO"+dto);
 		BeanUtils.copyProperties(dto, bo);
+		System.out.println("in service"+bo);
 		//use dao
 	bo=	dao.loginCheck(bo);
-if(bo!=null)return dto;
+if(bo!=null) {
+	return dto;
+}
 return null;
 		
 	}
