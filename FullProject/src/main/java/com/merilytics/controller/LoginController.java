@@ -1,7 +1,9 @@
 package com.merilytics.controller;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -23,26 +25,29 @@ public class LoginController {
 @Inject
 	private UsersService service;
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public @ResponseBody String loginPage(@RequestBody UsersDTO map) {
+	public @ResponseBody Map<String,String> loginPage(@RequestBody UsersDTO map) {
 	/*	System.out.println("inside login controller");
 		System.out.println(map.getuName() + "        " + map.getPwd());
 		// System.out.println(userName.length());
 		// System.out.println(userName+""+passWord);
-*/	System.out.println(map);
+*///	System.out.println(map);
+Map<String,String> maps = new LinkedHashMap<String, String>();
 		 UsersDTO dt=	service.loginService(map);
 		 if(dt!=null) {
-			return "logged in successfully";
+			 maps.put("key", "success");
+			return maps;
 		} else {
-			return "login failure";
+			maps.put("key", "failure");
+			return  maps;
 		}
 	}
 
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
 	public @ResponseBody List test() {
-		System.out.println("inside test suresh controller");
+		//System.out.println("inside test suresh controller");
 		List map = new ArrayList();
 		map.add("edfcevw");
-		System.out.println("changes");
+		//System.out.println("changes");
 		// what the fuck is this
 		return map;
 	}

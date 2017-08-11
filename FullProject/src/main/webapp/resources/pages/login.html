@@ -4,17 +4,15 @@
 <head>
     <meta charset="ISO-8859-1">
     <title>Merilytics</title>
-    <link rel="stylesheet" href="resources/css/styles1.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
 </head>
 
 <body>
 
     <br>
     <div id="login" ng-controller="myCtrl">
-        <h1 style="color: red">{{myWelcome[0]}}</h1>
-        <p ng-bind="myWelcome[0]"></p>
+        <!-- <h1 style="color: red">{{myWelcome[0]}}</h1> -->
+        <!-- <p ng-bind="myWelcome[0]"></p> -->
         <form name="myForm">
             <h3>Sign in</h3>
             <input type="email" placeholder="enter username" ng-model="vm.email" name="username" required/>
@@ -26,9 +24,10 @@
             <a href="#!london">forgot password</a>
         </form>
     </div>
-    <script>
-        var app = angular.module("myApp", ["ngRoute"]);
-
+<!--     <script>
+    
+        
+        
         app.controller('myCtrl', function ($scope, $http) {
             $scope.loginCheck = function (obj) {
 
@@ -54,7 +53,7 @@
                     $scope.myWelcome = response.statusText;
                 });
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
