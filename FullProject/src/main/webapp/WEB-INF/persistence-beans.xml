@@ -9,15 +9,15 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 
 <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
     <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-    <property name="url" value="jdbc:mysql://10.10.0.106:3306/vamsi?useSSL=false"/>
-    <property name="username" value="meritus"/>
-    <property name="password" value="meritus"/>
+    <property name="url" value="jdbc:mysql://localhost:3306/fullproject?useSSL=false"/>
+    <property name="username" value="root"/>
+    <property name="password" value="root"/>
   </bean>
   
   
   <bean id="sesfact" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
      <property name="dataSource" ref="ds"/>
-       <property name="packagesToScan" value="com.merilytics.dto"/>
+       <property name="packagesToScan" value="com.merilytics.bo"/>
       <property name="hibernateProperties">
             <props>
               <prop key="show_sql">true</prop>
@@ -31,5 +31,5 @@ http://www.springframework.org/schema/context/spring-context.xsd">
    <property name="sessionFactory" ref="sesfact"/>
  </bean>
   
- <context:component-scan base-package="com.merilytics.dao"/>
+ <context:component-scan base-package="com.merilytics.dao,com.merilytics.config"/>
 </beans>
